@@ -1,5 +1,48 @@
-function tocaSomPom() {
-    
-    document.querSelector('#som_tecla_pow').play();
+//Parametro geral para algo geral
+/*function tocaSom (idElementoAudio) {
+    document.querSelector(idElementoAudio).play();
 }
-document.querySelector('.tecla_pow').onclick = tocaSomPom;
+
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+// variavel que vai receber sempre um valor novo
+let contador = 0;
+// listaDeTeclas.lenght(= tamanho) são a quantidades de teclas(9) 
+while (contador < listaDeTeclas.length) {
+    const tecla = listaDeTeclas[contador]
+    //texto dinamicos - as variaveis do instrumentos do som
+    const instrumento = tecla.classList[1];
+    
+    //template string
+    const idAudio = `#som_${instrumento}`;
+
+    //console.log(idAudio);
+
+    //funçao anonima - 
+    tecla.onclick = function () {
+        tocaSom(idAudio);
+    }
+
+    contador = contador + 1;
+
+    console.log(contador)
+}*/
+
+// USANDO O FOR, codigo mais limpo 
+
+function tocaSom(idElementoAudio) {
+    document.querSelector(idElementoAudio).play();
+}
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
+
+    const tecla = listaDeTeclas[contador]
+    const instrumento = tecla.classList[1];
+    const idAudio = `#som_${instrumento}`;
+
+    tecla.onclick = function () {
+        tocaSom(idAudio);
+    }
+}
+
