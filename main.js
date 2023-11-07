@@ -28,7 +28,7 @@ while (contador < listaDeTeclas.length) {
     console.log(contador)
 }*/
 
-// USANDO O FOR 
+// USANDO O FOR, codigo mais limpo 
 
 function tocaSom(idElementoAudio) {
     document.querSelector(idElementoAudio).play();
