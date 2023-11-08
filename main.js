@@ -28,7 +28,7 @@ while (contador < listaDeTeclas.length) {
     console.log(contador)
 }*/
 
-// USANDO O FOR, codigo mais limpo 
+// USANDO O FOR, codigo mais limpo agora e depois 
 
 function tocaSom(seletorAudio) {
     const elemento = document.querSelector(seletorAudio); 
